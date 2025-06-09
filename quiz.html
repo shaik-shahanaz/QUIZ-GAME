@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Quiz App</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="quiz-container" id="quiz-container">
+    <h1>Quiz Game</h1>
+
+    <div id="category-screen">
+      <h2>Select a Category</h2>
+      <button onclick="startQuiz('science')">Science</button>
+      <button onclick="startQuiz('gk')">General Knowledge</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+      <h2 id="question">Question text</h2>
+      <ul>
+        <li><button class="option-btn" onclick="selectAnswer(0)">Option 1</button></li>
+        <li><button class="option-btn" onclick="selectAnswer(1)">Option 2</button></li>
+        <li><button class="option-btn" onclick="selectAnswer(2)">Option 3</button></li>
+        <li><button class="option-btn" onclick="selectAnswer(3)">Option 4</button></li>
+      </ul>
+      <p>Time Left: <span id="timer">15</span> seconds</p>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="result" style="display:none;"></div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
